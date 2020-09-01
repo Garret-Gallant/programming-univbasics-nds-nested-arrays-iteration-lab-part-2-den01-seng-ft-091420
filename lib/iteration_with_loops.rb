@@ -12,20 +12,19 @@ def find_min_in_nested_arrays(src)
 #   [30, 36, 38, 39, 40, 45, 47, 49, 50, 59, 60, 60, 65, 63, 61, 56, 49, 43, 40, 39, 35, 32, 23, 22],
 # ]
 
-  def find_min_in_nested_arrays(src)
-  array_of_daily_temp = []
+  new_array = []
   row_index = 0
     while row_index < src.count do 
       element_index = 0
-      min_integer_element = 0
+      min_value = 0
         while element_index < src[row_index].count do 
-          if src[row_index][element_index].length < min_integer_element.length
-            min_integer_element = src[row_index][element_index]
+          if src[row_index][element_index].length < min_value.length
+            min_value = src[row_index][element_index]
           end
           element_index += 1
         end
-      array_of_daily_temp << min_integer_element
+      new_array << min_value
       row_index += 1
     end
-    array_of_daily_temp
+    new_array
 end
